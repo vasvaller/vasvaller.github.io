@@ -1,0 +1,164 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #312785;
+  background-image: repeating-linear-gradient(150deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.06) 1px, transparent 0, transparent 41px),
+    repeating-linear-gradient(-150deg, rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.06) 1px, transparent 0, transparent 41px);
+  ;
+  color: white;
+  font-family: segoe UI, sans-serif;
+  cursor: default;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: block;
+  box-sizing: border-box;
+  width: 375px;
+  padding: 30px 30px;
+}
+
+.avatar {
+  display: block;
+  width: 200px;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.skill {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  background-color: #DE5113;
+  font-size: 1rem;
+}
+
+.contact {
+  margin-bottom: 10px;
+}
+
+.contacts__icon {
+  display: inline-block;
+  position: relative;
+  top: 9px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contacts__text {
+  display: inline-block;
+}
+
+/* width adaptive */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 15pt;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1365px) {
+  .wrap {}
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1920px) {
+  h1, h2 {
+    font-size: 1rem;
+  }
+
+  .card {
+
+  }
+
+  /* .avatar {
+    width: 150px;
+    height: 150px;
+  } */
+}
+
+@media screen and (min-width: 1920px) {
+
+}
+
+
+
+/* height adaptive */
+@media screen and (max-height: 599px) {
+  .wrap {
+    height: auto;
+  }
+}
+
+@media screen and (min-height: 600px) and (max-height: 800px) and (min-width: 430px) {
+  .wrap {
+    height: 100vh;
+  }
+
+  .card {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    height: 550px;
+    transition: 1s;
+    perspective: 1000px;
+  }
+
+  .group-1,
+  .section__contacts {
+    align-self: center;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: 0.7s;
+  }
+
+  .section__contacts {
+    transform: rotateY(-180deg);
+  }
+
+  .card:hover .group-1 {
+    transform: rotateY(-180deg);
+    transition: 0.7s;
+
+  }
+  .card:hover .section__contacts {
+    transform: rotateY(-360deg);
+    transition: 0.7s;
+  }
+}
+@media screen and (min-height: 801px) {
+  .wrap {
+    height: 100vh;
+  }
+}
